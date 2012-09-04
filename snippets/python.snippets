@@ -108,7 +108,11 @@ snippet try Try/Except/Else/Finally
 	finally:
 		${6:# TODO: write code...}
 # if __name__ == '__main__':
-snippet ifmain
+snippet ifm
+	def main():
+		'''Start execution of ${1:`Filename('$1.py', 'foo.py')`}.'''
+		${2:pass}
+
 	if __name__ == '__main__':
 		${1:main()}
 # __magic__
