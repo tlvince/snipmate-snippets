@@ -139,3 +139,10 @@ snippet testcase
 			${3:# TODO: write code...}
 snippet fut
 	from __future__ import ${1}
+snippet args
+	'''Parse the command-line arguments.'''
+	parser = argparse.ArgumentParser(description=__doc__.split('\n')[0],
+		formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+	parser.add_argument('${1:-s}', '${2:--long}',
+		help='${3:option usage description}')
+	return parser.parse_args()
