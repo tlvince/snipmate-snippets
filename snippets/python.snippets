@@ -6,10 +6,12 @@ snippet from
 	from ${1:package} import ${2:module}
 # Module Docstring
 snippet docs
-	'''
-	File: ${1:`Filename('$1.py', 'foo.py')`}
-	Author: ${2:`g:snips_author`}
-	Description: ${3}
+	#!/usr/bin/env python3
+	# Copyright `strftime("%Y")` `g:snips_author`
+
+	'''${1:One line summary of the program}.
+
+	${2:More elaborate usage description}.
 	'''
 snippet wh
 	while ${1:condition}:
